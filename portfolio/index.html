@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        gading: '#F0ECD9',
+                        malam: '#090D22',
+                        olive: '#A29D21',
+                        birumuda: '#2E2C42'
+                    },
+                    fontFamily: {
+                        'heading': ['Emberly'],
+                        'desc': ['Playfair Display']
+                    },
+                    fontSize: {
+                        '10xl': '240px',
+                    },
+                    lineHeight: {
+                        'extra-loose': '226px',
+                        '12': '3rem',
+                    },
+                    height: {
+                        'double': '150vh',
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <script src="./script.js" defer></script>
+
+    <!-- custom CSS -->
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            @font-face {
+                font-family: 'Emberly';
+                src: url('./font/Emberly-Bold.ttf') format('truetype');
+                font-weight: 700;
+                font-style: normal;
+            }
+            
+            @font-face {
+                font-family: 'Emberly';
+                src: url('./font/Emberly-Black.ttf') format('truetype');
+                font-weight: 900;
+                font-style: bold;
+            }
+
+            p.vertikal {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+            }
+
+            #hamburger {
+                transition: all 1s ease-in;
+            }
+
+            .line {
+                transform: rotate(45deg) translateY(8px) translateX(8px); 
+                margin-bottom: 0; 
+            }
+            .line2 {
+                transform: rotate(-45deg) translateY(7px) translateX(-7px); 
+
+            }
+        }
+      </style>
+
+    <title>Portfolio | Tailwind CSS</title>
+</head>
+
+<body class="bg-gading ">
+    <nav class="w-24 h-screen fixed bg-gading border-r-[2px] border-olive z-50 ">
+        <div id="hamburger" class="h-24 pt-8 border-b-[2px] border-olive ">
+            <span class="line h-[2px] w-3/4 block bg-olive mb-4 mx-auto  "></span>
+            <span class=" line2 h-[2px] w-3/4 block bg-olive mx-auto "></span>
+        </div>
+        <div class="flex items-center justify-center h-5/6 ">
+            <p class=" vertikal font-heading uppercase text-2xl font-bold tracking-[0.5rem] -ml-4 text-olive ">
+                pramanarendra’s
+                portfolio</p>
+        </div>
+        <div id="menu"
+            class=" hidden w-screen h-screen absolute ml-24 left-0 top-0 right-0 bg-malam font-heading text-gading text-8xl font-black flex-col justify-center items-center space-y-12 ">
+            <a href="" class="-ml-24 hover:text-olive transition ">Home</a>
+            <a href="" class="-ml-24 hover:text-olive transition ">About</a>
+            <a href="" class="-ml-24 hover:text-olive transition ">Projects</a>
+            <a href="" class="-ml-24 hover:text-olive transition ">Articles</a>
+        </div>
+    </nav>
+
+    <section id=" landing-page"
+        class=" text-center h-double flex flex-col justify-center bg-center bg-cover overflow-x-hidden relative text-gading -z-10  "
+        style="background-image: url(./img/background.png)">
+        <div class="fixed top-24 left-0 right-0 ">
+            <p class="text-5xl font-desc ">I welcome you to</p>
+            <h1 class="text-10xl font-heading font-bold -mt-10 ">The Nesting <p class="leading-10"> Ground </p>
+            </h1>
+
+        </div>
+        <img src="./img/decoration.png" alt="leaves" class="h-min absolute bottom-0 left-1/3   ">
+    </section>
+
+    <section id="about" class=" h-screen bg-malam text-gading text-center flex flex-col justify-center items-center ">
+        <p class="font-heading text-6xl w-3/5 mx-auto ">Hi! my name is Rendra. As a multidisciplinary
+            freelancer, i'm
+            passionate
+            about creating
+            iconic digital
+            experiences through motion, typography, and creative coding for clients around the world.</p>
+        <a href="" class="font-desc text-2xl mt-12 text-olive ">Read More</a>
+    </section>
+
+    <section id="project" class=" grid grid-rows-2 grid-cols-3 gap-12 bg-gading mx-auto p-52 ">
+        <div class="w-80 ">
+            <h2 class=" font-heading text-6xl font-black uppercase ">Latest Work</h2>
+            <p class=" font-desc text-3xl ">Here are some of my selected works over the past year</p>
+        </div>
+        <div class="w-80 ">
+            <img src="" alt="" class="w-80 h-32 bg-gray-300 mb-4 border border-black ">
+            <p class=" font-heading font-black text-3xl mb-2 ">Avenitra</p>
+            <p class=" font-desc ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et laoreet
+                sem.</p>
+        </div>
+        <div class="w-80 ">
+            <img src="" alt="" class="w-80 h-32 bg-gray-300 mb-4 border border-black ">
+            <p class=" font-heading font-black text-3xl mb-2 ">Avenitra</p>
+            <p class=" font-desc ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et laoreet
+                sem.</p>
+        </div>
+        <div class="w-80 ">
+            <img src="" alt="" class="w-80 h-32 bg-gray-300 mb-4 border border-black ">
+            <p class=" font-heading font-black text-3xl mb-2 ">Avenitra</p>
+            <p class=" font-desc ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et laoreet
+                sem.</p>
+        </div>
+        <div class="w-80 ">
+            <img src="" alt="" class="w-80 h-32 bg-gray-300 mb-4 border border-black ">
+            <p class=" font-heading font-black text-3xl mb-2 ">Avenitra</p>
+            <p class=" font-desc ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et laoreet
+                sem.</p>
+        </div>
+        <div class="w-80 ">
+            <img src="" alt="" class="w-80 h-32 bg-gray-300 mb-4 border border-black ">
+            <p class=" font-heading font-black text-3xl mb-2 ">Avenitra</p>
+            <p class=" font-desc ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et laoreet
+                sem.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

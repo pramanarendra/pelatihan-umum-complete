@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tambahkan tag script CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tambahkan tag script untuk konfigurasi Tailwind -->
+    <!-- tambahkan konfigurasi font baru -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        'heading': ['Emberly'],
+                    },
+
+                }
+            }
+        }
+    </script>
+
+    <!-- tambahkan style untuk custom css -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            @font-face {
+                font-family: 'Emberly';
+                src: url('./Emberly-Bold.ttf') format('truetype');
+                font-weight: 700;
+                font-style: normal;
+            }
+            
+            @font-face {
+                font-family: 'Emberly';
+                src: url('./Emberly-Black.ttf') format('truetype');
+                font-weight: 900;
+                font-style: bold;
+            }
+        }
+      </style>
+    <title>Tailwind - Typography</title>
+</head>
+
+<body>
+    <div class=" w-min text-justify m-8 border border-gray-700 box-border p-8 mx-auto ">
+        <div class="bg-cover bg-center h-48 w-72 mb-8 " style="background-image: url(../candi.png)">
+        </div>
+        <h1 class="font-heading text-5xl font-black uppercase w-72">Think, Create <span
+                class="text-8xl tracking-wide w-72 ">Deliver</span></h1>
+        <p class="w-72">a strong project is created by deep collaboration. I design, develop, and deliver websites that
+            drive results
+            and win awards.</p>
+    </div>
+</body>
+
+</html>
